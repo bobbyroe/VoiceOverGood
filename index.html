@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- Appears as search results links -->
-    <title>This is a terrible web page</title>
+    <title>This is a terrific web page</title>
     <!-- Appears as search results description -->
     <meta name="description" content="Sanity check for all the html elements" />
     <link href="./assets/styles/index.processed.css" rel="stylesheet">
@@ -10,73 +10,77 @@
 <body>
 
 <header class="container" role="banner">
-  <div class="h-alpha">This is a poorly made webpage</div>
+  <h1 class="h-alpha">This is a properly made webpage</h1>
   
-  <p>It is not accessible and uses divs instead of native elements. It looks right on mobile and desktop devices, but has many problems. Headings and inputs won't be read correctly by screen readers. Buttons and links aren't accessible with a keyboard.</p>
+  <p>It is accessible and uses native elements instead of generic divs. 
+    It looks right on mobile and desktop devices, and is free from problems. 
+    Headings and inputs are read correctly by screen readers. 
+    Buttons and links are accessible with a keyboard.</p>
 </header>
 <main class="container">
   
-  <div class="h-bravo">Search Input</div>
+  <h2 class="h-bravo">Search Input</h2>
   
-  <p>This search input has no label, and a div acting as a button</p>
+  <p>This search form uses role, a visually hidden label that's still readable for a screen reader, input type, and a button.</p>
   
   <div class="search-container">
+    <label for="site-search">Search this website:</label>
     <input class="input-search" type="text" id="site-search" name="q">
-    <div class="site-search-submit" type="submit">
-      <span class="hidden">Search</hidden>
-    </div>
+    <button class="site-search-submit" type="submit">
+      <span class="hidden" role="img">Search</hidden>
+    </button>
   </div>
  
-  <div class="h-bravo">
+  <h2 class="h-bravo">
     Responsive horizontal product kiosk
-  </div>
+  </h2>
   <p>
-    The links have no href attribute and aren't focusable.
+    The scrolling element will always make the last item fit partly outside the container.
   </p>  
     
   <ul class="horizontal-scroll">
-    <li><a>Et iusto odio dignissimos ducimus</a></li>
-    <li><a>Nisi ut aliquid ex ea commodi consequatur</a></li>
-    <li><a>Quis autem vel eum iure reprehenderit</a></li>
-    <li><a>Corrupti quos dolores et quas molestias </a></li>
-    <li><a>Ut aut reiciendis voluptatibus maiores</a></li>
-    <li><a>Temporibus autem quibusdam et aut officiis</a></li>
-    <li><a>Animi, id est laborum et dolorum fuga</a></li>
-    <li><a>Quis autem vel eum iure reprehenderit</a></li>
-    <li><a>Corrupti quos dolores et quas molestias </a></li>
-    <li><a>Ut aut reiciendis voluptatibus maiores</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Et iusto odio dignissimos ducimus</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Nisi ut aliquid ex ea commodi consequatur</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Quis autem vel eum iure reprehenderit</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Corrupti quos dolores et quas molestias </a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Ut aut reiciendis voluptatibus maiores</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Temporibus autem quibusdam et aut officiis</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Animi, id est laborum et dolorum fuga</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Quis autem vel eum iure reprehenderit</a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Corrupti quos dolores et quas molestias </a></li>
+    <li><a href="http://a11yengineer.com" target="_blank">Ut aut reiciendis voluptatibus maiores</a></li>
   </ul>
   
   <form action="/backend/">
-    <div class="h-bravo">
+    <h2 class="h-bravo">
       CSS styled checkbox toggle switches
-    </div>
+    </h2>
     <p>
-      These checkbox inputs have no assigned labels and are missing roles to identify them as switches.
+      These checkbox inputs use only CSS with native elements and no additional divs or spans to manage animations on hover, focus, active and on/off states.
     </p>
     <fieldset>
-      <div class="h-charlie">Choose your options:</div>
+      <legend>Choose your options:</legend>
 
       <input class="switch" type="checkbox" id="alpha">
-      <div>Alpha</div>
+      <label for="alpha">Alpha</label>
 
       <input class="switch" type="checkbox" id="bravo">
-      <div>Bravo</div>
+      <label for="bravo">Bravo</label>
 
       <input class="switch" type="checkbox" id="charlie">
-      <div>Charlie</div>
+      <label for="charlie">Charlie</label>
     </fieldset>
 
-    <div class="h-bravo">
+    <h2 class="h-bravo">
       Select styled with CSS
-    </div>
+    </h2>
     <p>
-      This select has no actual label.
+      This select uses minimal extra markup and CSS to create a stylized select with hover and focus states.
     </p>
     <div class="select-container">
-      <p><strong>Select a Nato Phoenetic Letter</strong></p>
+      <label for="selectAlpha">Select a Nato Phoenetic Letter</label>
       <select id="selectAlpha">
-        <option label="First select" disabled selected>- - -</option>
+        <option label="First select" disabled selected>-Choose one-</option>
         <option label="Alpha">Alpha</option>
         <option label="Bravo">Bravo</option>
         <option label="Charlie">Charlie</option>
@@ -84,29 +88,29 @@
       </select>
     </div>
 
-    <div class="h-bravo">A Bunch of Input Elements</div>
+    <h2 class="h-bravo">A Bunch of Input Elements</h2>
     
     <fieldset>
-      <div class="h-charlie">Enter all of your personal information</div>
+      <legend>Enter your personal information</legend>
       
-      <label>Phone number <span class="required">Required</span></label>
+      <label for="phone-number">Phone number <span class="required">Required</span></label>
       <input type="tel" id="phone-number" name="phone" aria-describedby="phone-tip" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
       <div role="tooltip" id="phone-tip" class="input-tooltip">Format: 555-123-4567</div>
      
-      <label>T-mobile.com email <span class="required">Required</span></label>
+      <label for="email">T-mobile.com email <span class="required">Required</span></label>
       <input type="email" id="email" pattern=".+@t-mobile.com" size="35" required>
 
-      <label>Username <span class="required">Required</span></label>
+      <label for="username">Username <span class="required">Required</span></label>
       <input type="text" id="username" name="username" required>
 
-      <label>Password (8 characters minimum) <span class="required">Required</span></label>
+      <label for="password">Password (8 characters minimum) <span class="required">Required</span></label>
 
       <div class="password-container">
         <input type="password" id="password" name="password" minlength="8" required>
       </div>
     </fieldset>
     
-    <div class="button-alpha" type="button">Submit Button Alpha</div>
+    <button class="button-alpha" type="button">Submit Button Alpha</button>
   </form>
 </main>
 
