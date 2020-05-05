@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Appears as search results links -->
+    <title>This is a terrible web page</title>
+    <!-- Appears as search results description -->
+    <meta name="description" content="Sanity check for all the html elements" />
+    <link href="/assets/styles/index.processed.css" rel="stylesheet">
+  </head>
+<body>
+
+<header class="container" role="banner">
+  <div class="h-alpha">This is a poorly made webpage</div>
+  
+  <p>It is not accessible and uses divs instead of native elements. It looks right on mobile and desktop devices, but has many problems. Headings and inputs won't be read correctly by screen readers. Buttons and links aren't accessible with a keyboard.</p>
+</header>
+<main class="container">
+  
+  <div class="h-bravo">Search Input</div>
+  
+  <p>This search input has no label, and a div acting as a button</p>
+  
+  <div class="search-container">
+    <input class="input-search" type="text" id="site-search" name="q">
+    <div class="site-search-submit" type="submit">
+      <span class="hidden">Search</hidden>
+    </div>
+  </div>
+ 
+  <div class="h-bravo">
+    Responsive horizontal product kiosk
+  </div>
+  <p>
+    The links have no href attribute and aren't focusable.
+  </p>  
+    
+  <ul class="horizontal-scroll">
+    <li><a>Et iusto odio dignissimos ducimus</a></li>
+    <li><a>Nisi ut aliquid ex ea commodi consequatur</a></li>
+    <li><a>Quis autem vel eum iure reprehenderit</a></li>
+    <li><a>Corrupti quos dolores et quas molestias </a></li>
+    <li><a>Ut aut reiciendis voluptatibus maiores</a></li>
+    <li><a>Temporibus autem quibusdam et aut officiis</a></li>
+    <li><a>Animi, id est laborum et dolorum fuga</a></li>
+    <li><a>Quis autem vel eum iure reprehenderit</a></li>
+    <li><a>Corrupti quos dolores et quas molestias </a></li>
+    <li><a>Ut aut reiciendis voluptatibus maiores</a></li>
+  </ul>
+  
+  <form action="/backend/">
+    <div class="h-bravo">
+      CSS styled checkbox toggle switches
+    </div>
+    <p>
+      These checkbox inputs have no assigned labels and are missing roles to identify them as switches.
+    </p>
+    <fieldset>
+      <div class="h-charlie">Choose your options:</div>
+
+      <input class="switch" type="checkbox" id="alpha">
+      <div>Alpha</div>
+
+      <input class="switch" type="checkbox" id="bravo">
+      <div>Bravo</div>
+
+      <input class="switch" type="checkbox" id="charlie">
+      <div>Charlie</div>
+    </fieldset>
+
+    <div class="h-bravo">
+      Select styled with CSS
+    </div>
+    <p>
+      This select has no actual label.
+    </p>
+    <div class="select-container">
+      <p><strong>Select a Nato Phoenetic Letter</strong></p>
+      <select id="selectAlpha">
+        <option label="First select" disabled selected>- - -</option>
+        <option label="Alpha">Alpha</option>
+        <option label="Bravo">Bravo</option>
+        <option label="Charlie">Charlie</option>
+        <option label="Delta">Delta</option>
+      </select>
+    </div>
+
+    <div class="h-bravo">A Bunch of Input Elements</div>
+    
+    <fieldset>
+      <div class="h-charlie">Enter all of your personal information</div>
+      
+      <label>Phone number <span class="required">Required</span></label>
+      <input type="tel" id="phone-number" name="phone" aria-describedby="phone-tip" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <div role="tooltip" id="phone-tip" class="input-tooltip">Format: 555-123-4567</div>
+     
+      <label>T-mobile.com email <span class="required">Required</span></label>
+      <input type="email" id="email" pattern=".+@t-mobile.com" size="35" required>
+
+      <label>Username <span class="required">Required</span></label>
+      <input type="text" id="username" name="username" required>
+
+      <label>Password (8 characters minimum) <span class="required">Required</span></label>
+
+      <div class="password-container">
+        <input type="password" id="password" name="password" minlength="8" required>
+      </div>
+    </fieldset>
+    
+    <div class="button-alpha" type="button">Submit Button Alpha</div>
+  </form>
+</main>
+
+<footer class="container" role="contentinfo">
+  <ul>
+    <li>
+      <a href="https://a11yengineer.com/">A11y Engineer</a>
+    </li>
+  </ul>
+</footer> 
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/scripts/index.js"></script>
+
+</html>
